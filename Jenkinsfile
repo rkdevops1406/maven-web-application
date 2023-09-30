@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage("code"){
             steps{
-               git branch: 'main', credentialsId: 'gitcred', url: 'https://github.com/rkdevops1406/maven-web-application.git'
+            //    git branch: 'main', credentialsId: 'gitcred', url: 'https://github.com/rkdevops1406/maven-web-application.git'
+               git credentialsId: 'gitcred', url: 'https://github.com/rkdevops1406/maven-web-application.git'
             }
         }
         stage("Build"){
