@@ -9,8 +9,8 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to D2SOL INC. Ph No: +001 9843308888  MORRISVILLE,NORTH CAROLINA,USA </h1>
-<h1 align="center"> D2SOL INC- Very Good company for DevOps with AWS in Bangalore India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
+<h1 align="center">Welcome to D2SOL INC. Ph No: (919) 338-5553  MORRISVILLE,NORTH CAROLINA,USA </h1>
+<h1 align="center"> D2SOL INC- Your goals are our goals & we look forward to helping you reach new heights.</h1>
 <hr>
 <br>
 	<h1><h3> Server Side IP Address </h3><br>
@@ -40,14 +40,14 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 		+91-9980923226,+91-9900012028
 		devopstrainingblr@gmail.com
 		<br>
-		<a href="mailto:devopstrainingblr@gmail.com">Mail to Mithun Technologies</a>
+		<a href="mailto:Info@d2sol.com">Mail to D2SOL INC</a>
 	</span>
 </div>
 <hr>
 	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
 <hr>
 <hr>
-<p align=center>D2SOL - INC, Training, Development Center.</p>
+<p align=center>D2SOL - INC, At D2Sol, we believe confidence comes from knowing more about the team handling your technology services.</p>
 <p align=center><small>Copyrights 2022 by <a href="http://D2SOL.com/">D2SOL,North Carolina</a> </small></p>
 
 </body>
