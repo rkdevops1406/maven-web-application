@@ -31,14 +31,14 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 <hr>
 <div style="text-align: center;">
 	<span>
-		<img src="images/mithunlogo.jpg" alt="" width="100">
+		<img src="images/mithunlogo.jpg" alt="" width="400">
 	</span>
 	<span style="font-weight: bold;">
 		D2SOL INC, 
 		Morrisville,
 		North Carolina,
-		+91-9980923226,+91-9900012028
-		devopstrainingblr@gmail.com
+		(919) 338-5553,
+		Info@gmail.com
 		<br>
 		<a href="mailto:Info@d2sol.com">Mail to D2SOL INC</a>
 	</span>
