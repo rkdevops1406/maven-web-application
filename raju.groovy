@@ -29,7 +29,7 @@ pipeline{
                 sshagent(['70844032-23e8-4e8d-82ca-43e2ce6a40fb']) {
                 sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Pipeline-1/target/maven-web-application.war  ec2-user@3.145.199.169:/opt/apache-tomcat-9.0.80/webapps'   
     
-                }
+                
             }
         }
          stage("Artifact Upload"){
