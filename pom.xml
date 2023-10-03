@@ -97,7 +97,7 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <name>nexus Repo</name>
 	      <url>http://3.21.241.63:8081/#browse/browse:hackthon-release/</url>
 	    </repository>
 	    
