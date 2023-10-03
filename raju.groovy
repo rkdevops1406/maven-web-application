@@ -26,7 +26,8 @@ pipeline{
         }
          stage("Artifact Upload"){
             steps{
-                nexusArtifactUploader credentialsId: '1399b3b3-e85e-45a3-8cab-f4efd4e623b2', groupId: 'com.mt', nexusUrl: '3.21.241.63:8081/', nexusVersion: 'nexus2', protocol: 'http', repository: 'http://3.21.241.63:8081/#browse/browse:hackthon-release', version: '0.0.1-SNAPSHOT'
+                // nexusArtifactUploader credentialsId: '1399b3b3-e85e-45a3-8cab-f4efd4e623b2', groupId: 'com.mt', nexusUrl: '3.21.241.63:8081/', nexusVersion: 'nexus2', protocol: 'http', repository: 'http://3.21.241.63:8081/#browse/browse:hackthon-release', version: '0.0.1-SNAPSHOT'
+                nexusArtifactUploader credentialsId: '1399b3b3-e85e-45a3-8cab-f4efd4e623b2', groupId: 'nexus', nexusUrl: '3.21.241.63:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://3.21.241.63:8081/#browse/browse:hackthon-release', version: '0.0.1-SNAPSHOT'
             }
         }  
     }  
