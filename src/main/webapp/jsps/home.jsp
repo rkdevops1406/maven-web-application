@@ -40,7 +40,7 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 		(919) 338-5553,
 		Info@gmail.com
 		<br>
-		<a href="mailto:Info@d2sol.com">Mail to D2SOL INC</a>
+		<a href="mailto:Info@d2sol.com"></a>
 	</span>
 </div>
 <hr>
