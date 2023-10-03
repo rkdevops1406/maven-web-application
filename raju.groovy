@@ -7,13 +7,15 @@ pipeline{
             }
         }
         
-        stage("Build"){
-            steps{
-                def mavenHome =tool name: "maven" ,type: "maven"
-                def mavenCMD ="${mavenHome}/bin/mvn"
-                sh "${mavenCMD} clean package"
-            }
-        }   
+        
+        stage("Build") {
+    steps {
+        def mavenHome = tool name: "maven", type: "maven"
+        def mavenCMD = "${mavenHome}/bin/mvn"
+        sh "${mavenCMD} clean package"
+    }
+}
+
         
                 
         stage("Deploy to tomcat"){
