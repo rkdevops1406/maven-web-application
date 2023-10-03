@@ -20,7 +20,7 @@ stage("Build") {
 
         stage("SonarQubetest") {
     steps {
-        scrpit{
+        script{
             withSonarQubeEnv('sonar')
             def mavenHome = tool name: "maven", type: "maven"
             def mavenCMD = "${mavenHome}/bin/mvn"
