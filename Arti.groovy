@@ -30,33 +30,17 @@ pipeline{
             }
         }
 
-        stage('Deploy to Nexus') {
-    steps {
-        script {
-            // Deploy the war file to Nexus
-            sh "pwd"
-            sh "ls -l"
-            echo "Deploying to Nexus with the following parameters:"
-            echo "URL: ${NEXUS_VERSION}:${NEXUS_REPOSITORY}"
-            echo "Repository ID: ${NEXUS_CREDENTIAL_ID}"
-            echo "File: target/maven-web-application.war"
-            echo "POM File: pom.xml"
-            sh "mvn deploy:deploy-file -Durl=${NEXUS_VERSION}:${NEXUS_REPOSITORY} -DrepositoryId=nexus -Dfile=target/maven-web-application.war -DpomFile=pom.xml -DrepositoryUsername=admin -DrepositoryPassword=12345"
+       
 
-            // sh "mvn deploy:deploy-file -Durl=${NEXUS_VERSION}:${NEXUS_REPOSITORY} -DrepositoryId=${NEXUS_CREDENTIAL_ID} -Dfile=target/maven-web-application.war -DpomFile=pom.xml"
-        }
-    }
-}
-
-    //      stage('Deploy to Nexus') {
-    //         steps {
-    //             script {
-    //                 // Deploy the war file to Nexus
-    //                 sh "pwd"
-    //                 sh "ls -l"
-    //                 sh "mvn deploy:maven-web-application.war -Durl=${NEXUS_VERSION}:${NEXUS_REPOSITORY} -DrepositoryId=${NEXUS_CREDENTIAL_ID} -Dfile=target/maven-web-application.war -DpomFile=pom.xml"
-    // }  }
-    //      }
+         stage('Deploy to Nexus') {
+            steps {
+                script {
+                    // Deploy the war file to Nexus
+                    sh "pwd"
+                    sh "ls -l"
+                    sh "mvn deploy:maven-web-application.war -Durl=${NEXUS_VERSION}:${NEXUS_REPOSITORY} -DrepositoryId=${NEXUS_CREDENTIAL_ID} -Dfile=target/maven-web-application.war -DpomFile=pom.xml"
+    }  }
+         }
 
     }
 }   
