@@ -35,7 +35,7 @@ pipeline{
                     // Deploy the war file to Nexus
                     sh "pwd"
                     sh "ls -l"
-                    sh "mvn deploy:maven-web-application.war -Durl=${NEXUS_VERSION}:${NEXUS_REPOSITORY} -DrepositoryId=${NEXUS_CREDENTIAL_ID} -Dfile=target/maven-web-application.war -DpomFile=pom.xml"
+                    sh "mvn deploy:deploy-file -Durl=${NEXUS_VERSION}:${NEXUS_REPOSITORY} -DrepositoryId=${NEXUS_CREDENTIAL_ID} -Dfile=target/maven-web-application.war -DpomFile=pom.xml"
     }  }
          }
 
