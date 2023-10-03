@@ -41,8 +41,9 @@ pipeline{
             echo "Repository ID: ${NEXUS_CREDENTIAL_ID}"
             echo "File: target/maven-web-application.war"
             echo "POM File: pom.xml"
+            sh "mvn deploy:deploy-file -Durl=${NEXUS_VERSION}:${NEXUS_REPOSITORY} -DrepositoryId=nexus -Dfile=target/maven-web-application.war -DpomFile=pom.xml -DrepositoryUsername=admin -DrepositoryPassword=12345"
 
-            sh "mvn deploy:deploy-file -Durl=${NEXUS_VERSION}:${NEXUS_REPOSITORY} -DrepositoryId=${NEXUS_CREDENTIAL_ID} -Dfile=target/maven-web-application.war -DpomFile=pom.xml"
+            // sh "mvn deploy:deploy-file -Durl=${NEXUS_VERSION}:${NEXUS_REPOSITORY} -DrepositoryId=${NEXUS_CREDENTIAL_ID} -Dfile=target/maven-web-application.war -DpomFile=pom.xml"
         }
     }
 }
