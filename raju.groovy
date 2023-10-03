@@ -7,13 +7,21 @@ pipeline{
                git credentialsId: 'gitcred', url: 'https://github.com/rkdevops1406/maven-web-application.git'
             }
         }
+        // stage("Build"){
+        //     steps{
+                
+        //         sh 'mvn clean package'
+                               
+        //     }
+        // }
+
         stage("Build"){
             steps{
-                
-                sh 'mvn clean package'
-                               
+                def mavenHome =tool name: "maven" ,type: "maven"
+                def mavenCMD ="${mavenHome}/bin/mvn"
+                sh "${mavenCMD} clean package"
             }
-        }
+        }   
         
                 
         stage("Deploy to tomcat"){
