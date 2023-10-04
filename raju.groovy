@@ -25,3 +25,16 @@ node {
         }
     }
 }
+node {
+    stage("Deploy") {
+                sshagent(['410fba6f-5bac-492a-9cc1-902f1598c80f']) {
+                sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Jenkins-Project/target/maven-web-application.war  ec2-user@18.119.125.167:/opt/apache-tomcat-9.0.80/webapps' 
+                }
+                
+    }
+}
+    
+
+
+
+    
