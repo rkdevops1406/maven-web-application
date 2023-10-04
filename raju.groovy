@@ -33,8 +33,21 @@ node {
                 
     }
 }
-    
 
-
-
-    
+node {
+    stage("Artifact upload"){
+        
+           def awsAccessKeyId = credentials('AKIATEXREA62VACBOZ2Q')
+           def awsSecretAccessKey = credentials('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')
+           def s3BucketName = 'hackthon-bucket'
+           def warFile = sh(returnStdout: true, script: 'find /var/lib/jenkins/workspace/Jenkins-Project/target/maven-web-application.war').trim()
+             
+            sh 'echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"'
+            sh 'echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"'            
+           sh """
+                  AWS_ACCESS_KEY_ID="${awsAccessKeyId}"
+                  AWS_SECRET_ACCESS_KEY="${awsSecretAccessKey}"
+                   aws s3 cp "${warFile}" "s3://${s3BucketName}/*.war"
+                    """
+                }
+  }
